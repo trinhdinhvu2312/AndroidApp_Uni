@@ -36,6 +36,13 @@ function init()
         `hinhanhloaisanpham` varchar(200) NOT NULL
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;');
 
+    query('CREATE TABLE `user` (
+        `id` int(11) NOT NULL primary key AUTO_INCREMENT,
+        `username` varchar(100) NOT NULL,
+        `password` varchar(100) NOT NULL,
+        `id_donhang` int(11) NOT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;');
+
     query('CREATE TABLE `sanpham` (
         `id` int(11) NOT NULL,
         `tensanpham` varchar(200) NOT NULL,
@@ -68,6 +75,10 @@ function init()
         
         ALTER TABLE `sanpham`
         MODIFY `id` int(11) NOT NULL AUTO_INCREMENT');
+
+    query('ALTER TABLE `user`
+        ADD CONSTRAINT `fk_user_donhang`
+        FOREIGN KEY (`id_donhang`) REFERENCES `donhang`(`id`) ON DELETE CASCADE;');
 
 }
 

@@ -4,7 +4,7 @@
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" style="background-color: white;" href="../index.php">
     <div class="sidebar-brand-icon">
-        <img src="../assets/img/jenkinsons-logo.png" style="width: 150px;">
+        <img src="../assets/img/5856.jpg" style="width: 100px; height: 71px;">
     </div>
     <div class="sidebar-brand-text mx-3" style="color: #154c79; font-size: 12px;"></div>
 </a>
